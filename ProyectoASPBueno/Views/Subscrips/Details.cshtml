@@ -1,0 +1,43 @@
+﻿@model ProyectoASPBueno.Models.Subscrip
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Subscrip</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compania)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empleados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empleados)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

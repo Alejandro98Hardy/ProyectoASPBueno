@@ -1,0 +1,48 @@
+﻿@model ProyectoASPBueno.Models.Subscrip
+
+@{
+    ViewBag.Title = "log";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    if (IsPost)
+    {
+        String Companyname = Request.Form["Companyname"];
+        String Contactname = Request.Form["Contactname"];
+        int Employescount = Request.Form["Employes"].AsInt();
+
+        <text>
+            you entered:
+            <br />
+            Company name: @Companyname
+            <br />
+            Contact name: @Contactname
+            <br />
+            Employes count: @Employescount
+            <br />
+        </text>
+    }
+}
+<div>
+    <form method="post">
+        <fieldset>
+            <legend>ADD CUSTOMER</legend>
+            <div>
+                <label for="Companyname">Company name:</label>
+                <input type="text" name="Companyname" value="" />
+            </div>
+            <div>
+                <label for="Contactname">Contact name:</label>
+                <input type="text" name="Contactname" value="" />
+            </div>
+            <div>
+                <label for="Employes">Employe count:</label>
+                <input type="text" name="Employes" value="" />
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="submit" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+</div>
