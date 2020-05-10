@@ -7,7 +7,7 @@ namespace ProyectoASPBueno.Migrations
     {
         public override void Up()
         {
-            CreateTable(
+            CreateTable(  
                 "dbo.Subscrips",
                 c => new
                     {
